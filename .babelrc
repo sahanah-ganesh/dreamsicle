@@ -1,0 +1,13 @@
+{
+  "presets": [
+    ["react-app", {
+      "flow": false,
+      "typescript": true
+    }]
+  ],
+  "env": {
+    "development": {
+      "plugins": []
+    }
+  }
+}

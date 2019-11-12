@@ -1,7 +1,7 @@
-import React, {Fragment} from 'react';
-import { ThemeProvider } from "emotion-theming";
-import GlobalStyle from "./global-style";
-import { theme } from "./theme/theme";
+import React, { Fragment } from "react"
+import { ThemeProvider } from "emotion-theming"
+import GlobalStyle from "./global-style"
+import { theme } from "./theme/theme"
 
 const App: React.FC = () => {
   return (
@@ -10,7 +10,7 @@ const App: React.FC = () => {
         <GlobalStyle />
       </Fragment>
     </ThemeProvider>
-  );
+  )
 }
 
-export default App;
+export default App

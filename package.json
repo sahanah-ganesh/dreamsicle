@@ -2,16 +2,24 @@
   "name": "dreamsicle-web",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "10.4",
+    "npm": "6.1.0"
+  },
   "dependencies": {
     "@rebass/preset": "4.0.5",
     "@types/jest": "24.0.22",
     "@types/node": "12.12.7",
+    "@types/react": "16.9.11",
     "@types/react-dom": "16.9.4",
+    "@types/react-redux": "7.1.2",
+    "@types/rebass": "4.0.3",
     "@types/styled-components": "4.4.0",
     "emotion-theming": "10.0.19",
     "normalize.css": "8.0.1",
     "react": "16.11.0",
     "react-dom": "16.11.0",
+    "react-redux": "7.1.1",
     "react-router-dom": "5.1.2",
     "react-scripts": "3.2.0",
     "rebass": "4.0.7",
@@ -22,7 +30,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "type-check": "tsc -p ./tsconfig.json",
+    "eject": "react-scripts eject",
+    "lint": "tslint -p ./tsconfig.json -c ./tslint.json --fix",
+    "pretty": "prettier 'src/**/*.js' -- --write"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,7 +50,21 @@
       "last 1 safari version"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run pretty && npm run lint -- --fix"
+    }
+  },
   "devDependencies": {
-    "@types/react": "16.9.11"
+    "@babel/core": "7.5.5",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.2.1",
+    "eslint-config-prettier": "6.1.0",
+    "eslint-plugin-prettier": "3.1.0",
+    "eslint-plugin-react": "7.14.3",
+    "husky": "3.0.4",
+    "prettier": "1.18.2",
+    "tslint": "5.20.0",
+    "tslint-react-hooks": "2.2.1"
   }
 }

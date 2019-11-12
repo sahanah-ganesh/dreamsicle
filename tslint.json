@@ -1,0 +1,19 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:recommended", "tslint-react-hooks"],
+  "jsRules": {},
+  "rules": {
+    "no-console": false,
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
+    "variable-name": [true, "ban-keywords"],
+    "semicolon": [true, "never"],
+    "react-hooks-nesting": "error"
+  },
+  "rulesDirectory": [],
+  "linterOptions": {
+    "exclude": [
+      "**/service-worker.js"
+    ]
+  }
+}
