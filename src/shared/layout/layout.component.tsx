@@ -1,15 +1,12 @@
 import React from "react"
 import { Box } from "rebass"
-import { theme } from "../../theme/theme"
 
 interface ILayoutProps {
   nav?: React.ReactNode
-  header?: React.ReactNode
   body?: React.ReactNode
-  largeBody?: boolean
 }
 
-export const Layout: React.SFC<ILayoutProps> = ({ nav, header, body, largeBody }) => (
+export const Layout: React.SFC<ILayoutProps> = ({ nav, body }) => (
   <Box
     sx={{
       display: "grid",
@@ -22,8 +19,8 @@ export const Layout: React.SFC<ILayoutProps> = ({ nav, header, body, largeBody }
       sx={{
         gridRowStart: 1,
         gridRowEnd: 2,
-        gridColumnStart: 2,
-        gridColumnEnd: 12,
+        gridColumnStart: 1,
+        gridColumnEnd: 13,
       }}
     >
       {nav}
@@ -31,12 +28,12 @@ export const Layout: React.SFC<ILayoutProps> = ({ nav, header, body, largeBody }
     <Box
       sx={{
         gridRowStart: 3,
-        gridRowEnd: 4,
-        gridColumnStart: 5,
-        gridColumnEnd: 7,
+        gridRowEnd: 6,
+        gridColumnStart: 2,
+        gridColumnEnd: 10,
       }}
     >
-      {header}
+      {body}
     </Box>
   </Box>
 )

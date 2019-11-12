@@ -3,6 +3,7 @@ export const theme = {
   colors: {
     white: "#FFFFFF",
   },
+  fontSizes: [14, 16, 18, 24, 36, 48],
 }
 
 // aliases
