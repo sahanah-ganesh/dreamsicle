@@ -33,7 +33,7 @@
     "type-check": "tsc -p ./tsconfig.json",
     "eject": "react-scripts eject",
     "lint": "tslint -p ./tsconfig.json -c ./tslint.json --fix",
-    "pretty": "prettier 'src/**/*.js' -- --write"
+    "pretty": "prettier 'src/**/*.js' --write"
   },
   "eslintConfig": {
     "extends": "react-app"
