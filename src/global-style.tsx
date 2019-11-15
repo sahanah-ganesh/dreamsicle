@@ -4,7 +4,7 @@ import background from "./images/background.jpg"
 const GlobalStyle = createGlobalStyle`
   body {
     background-image: url(${background});
-    font-family: "Indie Flower", cursive;
+    font-family: "Amatic SC", cursive;
     height: 100%;
     margin: 0:
   }

@@ -5,18 +5,7 @@ export const theme = {
     purple: "#6B4984",
   },
   fontSizes: [14, 16, 18, 24, 36, 48],
+  links: {
+    navbar: {},
+  },
 }
-
-// aliases
-// @ts-ignore
-// theme.fontSizes.note = theme.fontSizes[0];
-// @ts-ignore
-// theme.fontSizes.button = theme.fontSizes[1];
-// @ts-ignore
-// theme.fontSizes.text = theme.fontSizes[2];
-// @ts-ignore
-// theme.fontSizes.subtitle = theme.fontSizes[3];
-// @ts-ignore
-// theme.fontSizes.heading = theme.fontSizes[4];
-// @ts-ignore
-// theme.fontSizes.title = theme.fontSizes[5];

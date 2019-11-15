@@ -1,5 +1,5 @@
 import React from "react"
-import { Layout, Nav } from "shared"
+import { Layout, Nav } from "../../shared"
 
 interface IAboutProps {
   home?: string
