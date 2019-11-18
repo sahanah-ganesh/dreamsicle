@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
     background-image: url(${background});
     font-family: "Amatic SC", cursive;
     height: 100%;
+    width: 100%;
     margin: 0:
   }
 `

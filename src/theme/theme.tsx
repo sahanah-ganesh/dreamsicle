@@ -5,7 +5,5 @@ export const theme = {
     purple: "#6B4984",
   },
   fontSizes: [14, 16, 18, 24, 36, 48],
-  links: {
-    navbar: {},
-  },
+  navbar: {},
 }

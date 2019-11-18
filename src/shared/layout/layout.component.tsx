@@ -140,11 +140,12 @@ export const Layout: React.SFC<ILayoutProps> = ({ nav, body }) => (
     </Box>
     <Box
       sx={{
-        gridRowStart: 3,
-        gridRowEnd: 6,
-        gridColumnStart: 2,
-        gridColumnEnd: 10,
+        gridRowStart: [2, 2, 3, 3],
+        gridRowEnd: 7,
+        gridColumnStart: 1,
+        gridColumnEnd: 13,
       }}
+      bg="#241c47"
     >
       {body}
     </Box>
