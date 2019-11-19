@@ -6,5 +6,5 @@ interface IAboutProps {
 }
 
 export const About: React.SFC<IAboutProps> = ({ home }) => {
-  return <Layout nav={<Nav home={home} />} />
+  return <Layout nav={<Nav />} />
 }
