@@ -2,8 +2,16 @@ export const theme = {
   breakpoints: ["834px", "1112px", "1280px", "1440px"],
   colors: {
     white: "#FFFFFF",
-    purple: "#6B4984",
+    purple: "#241c47",
   },
   fontSizes: [14, 16, 18, 24, 36, 48],
-  navbar: {},
+  link: {
+    textDecoration: "none",
+    color: "white",
+  },
+  navText: {
+    pr: "5px",
+    fontSize: 24,
+    letterSpacing: "3px",
+  },
 }

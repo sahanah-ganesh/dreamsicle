@@ -1,41 +1,45 @@
 import React from "react"
 import { BrowserRouter as Router, Link } from "react-router-dom"
-import { Box, Flex, Text } from "rebass"
+import { Box, Flex } from "rebass"
+import { Text as Base } from "rebass"
+import styled from "styled-components"
 import { theme } from "../../theme/theme"
 
 interface INavProps {
   home?: string
 }
 
+export const NavText = styled(Base)`
+  font-size: 24px;
+  letter-spacing: 3px;
+  padding-right: 3em;
+  &:hover {
+    letter-spacing: 5px;
+    font-weight: bold;
+  }
+`
+
 export const Nav: React.SFC<INavProps> = ({ home }) => (
   <Box width="100%" bg="#241c47" p={3}>
     <Flex color="black" bg="#241c47" alignItems="center">
       <Router>
-        <Link style={{ textDecoration: "none", color: "white" }} to="/">
-          <Text pl={5} fontSize={theme.fontSizes[5]} fontWeight="bold" letterSpacing="5px">
+        <Link style={theme.link} to="/">
+          <NavText pl={5} fontSize={theme.fontSizes[5]} letterSpacing="3px">
             Dreamsicle
-          </Text>
+          </NavText>
         </Link>
         <Box mx="auto" />
-        <Link style={{ textDecoration: "none", color: "white" }} to="/about">
-          <Text pr={5} fontSize={theme.fontSizes[3]} letterSpacing="3px">
-            About
-          </Text>
+        <Link style={theme.link} to="/about">
+          <NavText>About</NavText>
         </Link>
-        <Link style={{ textDecoration: "none", color: "white" }} to="/demo">
-          <Text pr={5} fontSize={theme.fontSizes[3]} letterSpacing="3px">
-            Demo
-          </Text>
+        <Link style={theme.link} to="/demo">
+          <NavText>Demo</NavText>
         </Link>
-        <Link style={{ textDecoration: "none", color: "white" }} to="/team">
-          <Text pr={5} fontSize={theme.fontSizes[3]} letterSpacing="3px">
-            Team
-          </Text>
+        <Link style={theme.link} to="/team">
+          <NavText>Team</NavText>
         </Link>
-        <Link style={{ textDecoration: "none", color: "white" }} to="/connect">
-          <Text pr={5} fontSize={theme.fontSizes[3]} letterSpacing="3px">
-            Connect
-          </Text>
+        <Link style={theme.link} to="/connect">
+          <NavText>Connect</NavText>
         </Link>
       </Router>
     </Flex>
