@@ -1,47 +1,34 @@
 import React from "react"
-import { BrowserRouter as Router, Link } from "react-router-dom"
-import { Box, Flex } from "rebass"
-import { Text as Base } from "rebass"
+import { Box, Text as Base, Image, Button } from "rebass"
+import menu from "images/menu.svg"
 import styled from "styled-components"
-import { theme } from "../../theme/theme"
-
-interface INavProps {
-  home?: string
-}
 
 export const NavText = styled(Base)`
-  font-size: 24px;
-  letter-spacing: 3px;
-  padding-right: 3em;
-  &:hover {
-    letter-spacing: 5px;
-    font-weight: bold;
-  }
+  text-shadow: 5px 5px 10px #776291;
 `
 
-export const Nav: React.SFC<INavProps> = ({ home }) => (
-  <Box width="100%" bg="#241c47" p={3}>
-    <Flex color="black" bg="#241c47" alignItems="center">
-      <Router>
-        <Link style={theme.link} to="/">
-          <NavText pl={5} fontSize={theme.fontSizes[5]} letterSpacing="3px">
-            Dreamsicle
-          </NavText>
-        </Link>
-        <Box mx="auto" />
-        <Link style={theme.link} to="/about">
-          <NavText>About</NavText>
-        </Link>
-        <Link style={theme.link} to="/demo">
-          <NavText>Demo</NavText>
-        </Link>
-        <Link style={theme.link} to="/team">
-          <NavText>Team</NavText>
-        </Link>
-        <Link style={theme.link} to="/connect">
-          <NavText>Connect</NavText>
-        </Link>
-      </Router>
-    </Flex>
+export const Nav: React.FC = () => (
+  <Box
+    sx={{
+      display: "grid",
+      gridTemplateColumns: "repeat(6, 1fr)",
+      gridTemplateRows: "repeat(1, 1fr)",
+    }}
+  >
+    <NavText
+      letterSpacing={["0.05rem", "0.5rem", "1rem"]}
+      fontWeight="bold"
+      padding="1rem"
+      color="white"
+      fontSize={["4rem", "6rem", "8rem"]}
+    >
+      Dreamsicle
+    </NavText>
+    <Box mx="auto" />
+    <Box sx={{ gridColumnStart: 6, gridColumnEnd: 6 }}>
+      <Button style={{ padding: "1.5rem 1rem 0rem 0rem", backgroundColor: "transparent" }}>
+        <Image height="50px" width="50px" src={menu}></Image>
+      </Button>
+    </Box>
   </Box>
 )

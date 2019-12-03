@@ -1,10 +1,10 @@
 import React from "react"
-import { Layout, Nav } from "../../shared"
+import { Layout } from "../../shared"
 
 interface ITeamProps {
-  home?: string
+  text?: string
 }
 
-export const Team: React.SFC<ITeamProps> = ({ home }) => {
-  return <Layout nav={<Nav home={home} />} />
+export const Team: React.SFC<ITeamProps> = ({ text }) => {
+  return <Layout />
 }

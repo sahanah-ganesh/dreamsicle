@@ -1,5 +1,5 @@
 export const theme = {
-  breakpoints: ["834px", "1112px", "1280px", "1440px"],
+  breakpoints: ["800px", "1000px", "1200px"],
   colors: {
     purple: "#241c47",
   },
@@ -7,10 +7,5 @@ export const theme = {
   link: {
     textDecoration: "none",
     color: "white",
-  },
-  navText: {
-    pr: "5px",
-    fontSize: 24,
-    letterSpacing: "3px",
   },
 }

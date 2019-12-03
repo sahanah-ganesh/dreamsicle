@@ -1,10 +1,10 @@
 import React from "react"
-import { Layout, Nav } from "../../shared"
+import { Layout } from "../../shared"
 
 interface IConnectProps {
-  home?: string
+  text?: string
 }
 
-export const Connect: React.SFC<IConnectProps> = ({ home }) => {
-  return <Layout nav={<Nav home={home} />} />
+export const Connect: React.SFC<IConnectProps> = ({ text }) => {
+  return <Layout />
 }

@@ -1,10 +1,10 @@
 import React from "react"
-import { Layout, Nav } from "../../shared"
+import { Layout } from "../../shared"
 
 interface IDemoProps {
-  home?: string
+  text?: string
 }
 
-export const Demo: React.SFC<IDemoProps> = ({ home }) => {
-  return <Layout nav={<Nav home={home} />} />
+export const Demo: React.SFC<IDemoProps> = ({ text }) => {
+  return <Layout />
 }
