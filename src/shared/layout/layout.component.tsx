@@ -11,12 +11,12 @@ export const Layout: React.SFC<ILayoutProps> = ({ body }) => (
   <Box
     sx={{
       display: "grid",
-      gridTemplateColumns: "repeat(12, 1fr)",
+      gridTemplateColumns: "repeat(6, 1fr)",
       gridTemplateRows: "repeat(6, 1fr)",
       height: "100vh",
     }}
   >
-    <Box sx={{ gridRowStart: 1, gridRowEnd: 6, gridColumnStart: 1, gridColumnEnd: 12 }}>
+    <Box sx={{ gridRowStart: 1, gridRowEnd: 6, gridColumnStart: 1, gridColumnEnd: 6 }}>
       <Particles
         style={{ zIndex: -1, position: "fixed" }}
         params={{
@@ -132,11 +132,11 @@ export const Layout: React.SFC<ILayoutProps> = ({ body }) => (
       />
       <Box
         style={{ zIndex: 1, position: "absolute" }}
-        sx={{ gridRowStart: 1, gridRowEnd: 2, gridColumnStart: 1, gridColumnEnd: 12 }}
+        sx={{ gridRowStart: 1, gridRowEnd: 2, gridColumnStart: 1, gridColumnEnd: 6 }}
       >
         <Nav />
       </Box>
     </Box>
-    <Box sx={{ gridRowStart: 2, gridRowEnd: 7, gridColumnStart: 1, gridColumnEnd: 13 }}>{body}</Box>
+    {body}
   </Box>
 )

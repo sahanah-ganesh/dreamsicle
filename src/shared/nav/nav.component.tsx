@@ -26,7 +26,13 @@ export const Nav: React.FC = () => (
     </NavText>
     <Box mx="auto" />
     <Box sx={{ gridColumnStart: 6, gridColumnEnd: 6 }}>
-      <Button style={{ padding: "1.5rem 1rem 0rem 0rem", backgroundColor: "transparent" }}>
+      <Button
+        style={{
+          padding: "1.5rem 1rem 0rem 0rem",
+          backgroundColor: "transparent",
+          outline: "none",
+        }}
+      >
         <Image height="50px" width="50px" src={menu}></Image>
       </Button>
     </Box>
