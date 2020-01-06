@@ -22,4 +22,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 3. Start the web server using the `npm start` command. The app will be served at <http://localhost:3000/>.
 4. Go to <http://localhost:3000/> in your browser.
 
-!["Dreamsicle Demo"](https://imgur.com/a/nd9oezY)
+!["Dreamsicle Demo"]
