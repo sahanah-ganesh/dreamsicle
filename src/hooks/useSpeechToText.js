@@ -56,7 +56,9 @@ export default function useSpeechToText({
   // Only supported on Chrome browsers
   const chromeSpeechRecognition = () => {
     // Continuous recording after stopped speaking event
-    if (continuous) { recognition.continuous = true; }
+    if (continuous) {
+      recognition.continuous = true;
+    }
 
     // start recognition
     setIsRecording(true);
@@ -115,14 +117,18 @@ export default function useSpeechToText({
     handleTimeout({ stream, rec });
 
     speechEvents.on("speaking", () => {
-      if (onStartSpeaking) { onStartSpeaking(); }
+      if (onStartSpeaking) {
+        onStartSpeaking();
+      }
 
       // clear timeout
       clearTimeout(timeoutId.current);
     });
 
     speechEvents.on("stopped_speaking", () => {
-      if (onStoppedSpeaking) { onStoppedSpeaking(); }
+      if (onStoppedSpeaking) {
+        onStoppedSpeaking();
+      }
       rec.stop();
 
       // convert audio to WAV blob

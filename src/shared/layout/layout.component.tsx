@@ -130,10 +130,7 @@ export const Layout: React.SFC<ILayoutProps> = ({ body }) => (
           retina_detect: true,
         }}
       />
-      <Box
-        style={{ zIndex: 1, position: "absolute" }}
-        sx={{ gridRowStart: 1, gridRowEnd: 2, gridColumnStart: 1, gridColumnEnd: 6 }}
-      >
+      <Box style={{ zIndex: 1, position: "absolute" }}>
         <Nav />
       </Box>
     </Box>
