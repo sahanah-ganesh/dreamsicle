@@ -16,21 +16,23 @@ export const MoonButton = styled(ButtonBase)`
 export const RecordImage = styled(RecordBase)`
   height: 4rem;
   width: 4rem;
-  &{Box}:hover {
-    display: none;
-  }
 `
 export const MuteImage = styled(MuteBase)`
-  display: none;
   height: 4rem;
   width: 4rem;
 `
+interface IProps {
+  isRecording?: string
+  startCapturing: () => void
+  stopCapturing: () => void
+}
 
-export const MoonRecord: React.FC = () => (
-  <Box style={{ display: "flex", justifyContent: "center" }}>
-    <MoonButton onClick={() => true}>
-      <RecordImage src={microphone} />
-      <MuteImage src={mute} />
-    </MoonButton>
-  </Box>
-)
+export const MoonRecord: React.FC<IProps> = ({ isRecording, startCapturing, stopCapturing }) => {
+  return (
+    <Box style={{ display: "flex", justifyContent: "center" }}>
+      <MoonButton onClick={isRecording ? stopCapturing : startCapturing}>
+        {isRecording ? <MuteImage src={mute} /> : <RecordImage src={microphone} />}
+      </MoonButton>
+    </Box>
+  )
+}

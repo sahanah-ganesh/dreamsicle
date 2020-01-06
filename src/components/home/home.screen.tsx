@@ -4,30 +4,60 @@ import { Layout, MoonRecord } from "../../shared"
 import { theme } from "theme/theme"
 
 interface IHomeProps {
-  home?: string
+  startCapturing: () => void
+  stopCapturing: () => void
+  isRecording: string
+  error: string
+  results: string[]
 }
 
-export const Home: React.SFC<IHomeProps> = ({ home }) => {
+export const Home: React.SFC<IHomeProps> = ({
+  startCapturing,
+  stopCapturing,
+  isRecording,
+  error,
+  results,
+}) => {
   return (
     <Layout
       body={
         <Box sx={{ gridRowStart: 2, gridRowEnd: 6, gridColumnStart: 2, gridColumnEnd: 6 }}>
-          <MoonRecord />
+          <MoonRecord
+            startCapturing={startCapturing}
+            stopCapturing={stopCapturing}
+            isRecording={isRecording}
+          />
           <Box
             sx={{ gridRowStart: 4, gridRowEnd: 6, gridColumnStart: 2, gridColumnEnd: 5 }}
             bg={theme.colors.purple}
             style={{
-              boxShadow: "10px 10px 40px 10px #12082b inset",
+              boxShadow: "0px 0px 20px 0px white, 10px 10px 40px 10px #12082b inset",
               height: "10rem",
-              marginTop: "1rem",
+              marginTop: "2rem",
               color: "white",
+              position: "relative",
+              padding: "1rem",
+              borderRadius: "0.4em",
+              boxSizing: "border-box",
             }}
           >
-            <Box style={{ padding: "1rem" }}>
-              <Text>Hello Hello Hello Hello</Text>
-              <Text>Hello Hello Hello Hello</Text>
-              <Text>Hello Hello Hello Hello</Text>
-            </Box>
+            <Box
+              style={{
+                position: "absolute",
+                width: 0,
+                height: 0,
+                marginLeft: "-0.5em",
+                bottom: "-2em",
+                left: "20%",
+                boxSizing: "border-box",
+                border: "1em solid white",
+                borderColor: "transparent transparent #1a1239 #1a1239",
+                transformOrigin: "0 0",
+                transform: "rotate(-45deg)",
+                boxShadow: "-6px 6px 6px 0 #675e6f",
+              }}
+            ></Box>
+            {error ? <Text>{error}</Text> : <Text>{results}</Text>}
           </Box>
         </Box>
       }
