@@ -2,12 +2,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Dreamsicle PWA
 
--3 person project with designer, content writer and developer to understand/apply app development/product lifecycle
--user interviews through survey monkey to develop minimum viable product (mvp), agile methodology/project planning through asana, wire frames through figma
--develop progressive web app (pwa) to address user demand for speech-to-text dream journal with analytics and search functionality
+Dreamsicle is the skill-pushing brainchild of a developer seeking to experience the development and product lifecycle of an ambitious app, from the ground up.
+
+Bolstered with a designer and content writer, the three person team underwent a thorough planning process.
+
+Market research was conducted though Survey Monkey, via Reddit, in order to directly engage with Dreamsicle's target user base. The information gathered was used to develop the Minimal Viable Product (MVP). Agile methodology and project planning was managed through Asana, and wire frames were built using Figma.
+
+The objective of the Dreamsicle project is to develop a progressive web app (PWA) that addresses a gap in the digital note-taking space; speech-to-text capability for cumberless journaling. The app also incorporates comprehensive and accessible user-engagement analytics, as well as streamlined search functionality.
+
+IN PROGRESS
 
 ## Dependencies
-
+s
 - React 16.11.0
 - React Particles.js 2.7.0
 - Typescript 3.7.2
