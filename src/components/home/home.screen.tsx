@@ -1,6 +1,6 @@
 import React from "react"
 import { Box, Text } from "rebass"
-import { Layout, MoonRecord } from "../../shared"
+import { Layout, MoonRecord, DateTime } from "../../shared"
 import { theme } from "theme/theme"
 
 interface IHomeProps {
@@ -59,6 +59,7 @@ export const Home: React.SFC<IHomeProps> = ({
             ></Box>
             {error ? <Text>{error}</Text> : <Text>{results}</Text>}
           </Box>
+          <DateTime />
         </Box>
       }
     />

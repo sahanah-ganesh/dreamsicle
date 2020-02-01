@@ -1,5 +1,1 @@
 export * from "./home"
-export * from "./about"
-export * from "./demo"
-export * from "./team"
-export * from "./connect"
