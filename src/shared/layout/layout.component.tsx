@@ -7,7 +7,7 @@ interface ILayoutProps {
   body?: React.ReactNode
 }
 
-export const Layout: React.SFC<ILayoutProps> = ({ body }) => (
+export const Layout: React.FC<ILayoutProps> = ({ body }) => (
   <Box
     sx={{
       display: "grid",

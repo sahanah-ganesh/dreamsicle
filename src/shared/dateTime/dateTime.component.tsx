@@ -1,7 +1,7 @@
 import React from "react"
 import { Box, Text } from "rebass"
 
-export const DateTime: React.SFC = ({}) => {
+export const DateTime: React.FC = ({}) => {
   const today = new Date()
   const month = today.getMonth() + 1
   const date = today.getDate()

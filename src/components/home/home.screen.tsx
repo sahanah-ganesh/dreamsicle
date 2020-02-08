@@ -1,20 +1,24 @@
 import React from "react"
 import { Box, Text } from "rebass"
-import { Layout, MoonRecord, DateTime } from "../../shared"
+import { Layout, MoonRecord, DateTime, SaveDream } from "../../shared"
 import { theme } from "theme/theme"
 
 interface IHomeProps {
   startCapturing: () => void
   stopCapturing: () => void
   isRecording: string
+  isSaving: boolean
+  saveDream: () => void
   error: string
   results: string[]
 }
 
-export const Home: React.SFC<IHomeProps> = ({
+export const Home: React.FC<IHomeProps> = ({
   startCapturing,
   stopCapturing,
   isRecording,
+  isSaving,
+  saveDream,
   error,
   results,
 }) => {
@@ -57,9 +61,10 @@ export const Home: React.SFC<IHomeProps> = ({
                 boxShadow: "-6px 6px 6px 0 #675e6f",
               }}
             ></Box>
-            {error ? <Text>{error}</Text> : <Text>{results}</Text>}
+            {error ? <Text size="2rem">{error}</Text> : <Text size="2rem">{results}</Text>}
           </Box>
           <DateTime />
+          {results.length > 0 ? <SaveDream isSaving={false} saveDream={saveDream} /> : null}
         </Box>
       }
     />
