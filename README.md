@@ -13,7 +13,7 @@ The objective of the Dreamsicle project is to develop a progressive web app (PWA
 IN PROGRESS
 
 ## Dependencies
-s
+
 - React 16.11.0
 - React Particles.js 2.7.0
 - Typescript 3.7.2
