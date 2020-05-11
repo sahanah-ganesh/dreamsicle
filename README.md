@@ -2,9 +2,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Dreamsicle PWA
 
-Dreamsicle is the skill-pushing brainchild of a developer seeking to experience the development and product lifecycle of an ambitious app, from the ground up.
+Dreamsicle is the skill-pushing brainchild of a team seeking to experience the development and product lifecycle of an ambitious app, from the ground up.
 
-Bolstered with a designer and content writer, the three person team underwent a thorough planning process.
+Bolstered with a designer, content writer and developer, the three person team underwent a thorough planning process.
 
 Market research was conducted though Survey Monkey, via Reddit, in order to directly engage with Dreamsicle's target user base. The information gathered was used to develop the Minimal Viable Product (MVP). Agile methodology and project planning was managed through Asana, and wire frames were built using Figma.
 
